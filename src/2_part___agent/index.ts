@@ -10,8 +10,16 @@ export async function partTwo() {
   }
 
   const weatherTool = {
-    name: 'get_w_stuff',
-    description: 'Use This tool to get weather information',
+    name: 'get_weather_stuff',
+    description: 'Use this tool to get weather information',
+    parameters: z.object({
+      reasoning: z.string().describe('Why did you pick this tool?'),
+    }),
+  };
+
+  const popCultureTool = {
+    name: 'pop_culture_stuff',
+    description: 'Use this tool to get pop culture information',
     parameters: z.object({
       reasoning: z.string().describe('Why did you pick this tool?'),
     }),
@@ -19,7 +27,7 @@ export async function partTwo() {
 
   const response = await runAgent({
     userMessage,
-    tools: [weatherTool],
+    tools: [weatherTool, popCultureTool],
   });
 
   console.log(response);

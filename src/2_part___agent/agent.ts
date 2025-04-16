@@ -1,4 +1,4 @@
-import type { AIMessage } from '../../types';
+// import type { AIMessage } from '../../types';
 import { addMessages, getMessages } from '../memory';
 
 import { runLLM } from './llm';
@@ -26,6 +26,8 @@ export const runAgent = async ({
   });
 
   if (aiMessageResponse.tool_calls) {
+    console.log('Tool was called 🧰');
+
     console.log(aiMessageResponse.tool_calls);
   }
 
