@@ -2,18 +2,18 @@ import OpenAI from 'openai';
 
 // roles
 //  "function" // deprecated
-//  "developer"  "system"  // won't use
+//  "developer" // won't use
 
-//  "assistant"  "user"  "tool"   // will use
+//  "assistant"  "user"  "tool" "system"   // will use
 
 export type AIMessage =
   // | OpenAI.Chat.ChatCompletionFunctionMessageParam // deprecated
   // don't need these now
-  // | OpenAI.Chat.ChatCompletionSystemMessageParam
   // | OpenAI.Chat.ChatCompletionDeveloperMessageParam
   | OpenAI.Chat.ChatCompletionAssistantMessageParam
   | OpenAI.Chat.ChatCompletionUserMessageParam
-  | OpenAI.Chat.ChatCompletionToolMessageParam;
+  | OpenAI.Chat.ChatCompletionToolMessageParam
+  | OpenAI.Chat.ChatCompletionSystemMessageParam;
 
 /** using   ChatCompletionToolMessageParam ChatCompletionUserMessageParam
    * instead of this

@@ -2,6 +2,15 @@ import { runLLM } from './llm';
 
 import { addMessages, getMessages } from '../memory';
 
+// Without usage of datbase this would be One-Off
+// Now it is Chat based
+
+// One-off doesn't use memory which means there is no context
+// Chat based uses memory which means there is context
+
+// One-off is like a script
+// Chat based is like a chat
+
 export async function partOne() {
   console.log('Part One');
 
