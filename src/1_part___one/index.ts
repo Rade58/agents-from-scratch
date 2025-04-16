@@ -11,6 +11,8 @@ import { addMessages, getMessages } from '../memory';
 // One-off is like a script
 // Chat based is like a chat
 
+const DB_NAME = 'db-part1';
+
 export async function partOne() {
   console.log('Part One');
 
@@ -21,16 +23,13 @@ export async function partOne() {
     process.exit(1);
   }
 
-  await addMessages([{ role: 'user', content: userMessage }], 'db-part1');
+  await addMessages([{ role: 'user', content: userMessage }], DB_NAME);
 
-  const messages = await getMessages('db-part1');
+  const messages = await getMessages(DB_NAME);
 
   const responseMessage = await runLLM({ messages });
 
-  await addMessages(
-    [{ role: 'assistant', content: responseMessage }],
-    'db-part1'
-  );
+  await addMessages([{ role: 'assistant', content: responseMessage }], DB_NAME);
 
   console.log(responseMessage);
 }
