@@ -1,6 +1,14 @@
 import 'dotenv/config';
-import { partOne } from './src/1_part__one_of_vs_chat_based';
+import { partOne } from './src/1_part_one';
 
-//
+// -------------------------------------------------
+// We covered subjects:
+// - One of
+
+// - Chat based (memory (we used db))
+
+// - Chat based with system message
+
 partOne();
+// -------------------------------------------------
 //
