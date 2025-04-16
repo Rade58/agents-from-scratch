@@ -1,0 +1,27 @@
+import OpenAI from 'openai';
+
+// roles
+//  "function" // deprecated
+//  "developer"  "system"  // won't use
+
+//  "assistant"  "user"  "tool"   // will use
+
+export type AIMessage =
+  // | OpenAI.Chat.ChatCompletionFunctionMessageParam // deprecated
+  // don't need these now
+  // | OpenAI.Chat.ChatCompletionSystemMessageParam
+  // | OpenAI.Chat.ChatCompletionDeveloperMessageParam
+  | OpenAI.Chat.ChatCompletionAssistantMessageParam
+  | OpenAI.Chat.ChatCompletionUserMessageParam
+  | OpenAI.Chat.ChatCompletionToolMessageParam;
+
+/** using   ChatCompletionToolMessageParam ChatCompletionUserMessageParam
+   * instead of this
+   * 
+  | { role: 'user'; content: string }
+  | { role: 'tool'; content: string };
+*/
+
+export interface Tool<A = any, T = any> {
+  (input: { userMessage: string; toolArgs: A }): Promise<T>;
+}

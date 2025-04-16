@@ -1,8 +1,16 @@
 {
   "messages": [
     {
-      "id": "1",
-      "content": "Hello, world!"
+      "role": "user",
+      "content": "Zdravo",
+      "id": "dssdsd",
+      "createdAt": "2025-04-16T15:11:37.475Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Zdravo! Kako mogu da ti pomognem danas?",
+      "id": "jhkjhkjk",
+      "createdAt": "2025-04-16T15:11:38.978Z"
     }
   ]
 }
