@@ -34,3 +34,15 @@ export async function partOne() {
 
   console.log(responseMessage);
 }
+
+// system message we manually added to the db
+// db-part1.json
+
+// {
+//   "messages": [
+//     {
+//       "role": "system",
+//       "content": "You are a helpful assistant from Serbia. You live in Novi Sad. First time we talk, you can tell me that your name is some Serbian name by your choice. And first time we talk tell me you like sport of football."
+//     }
+//   ]
+// }
