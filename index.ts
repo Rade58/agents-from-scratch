@@ -3,6 +3,9 @@ import { partOne } from './src/1_part___one';
 import { partTwo } from './src/2_part___agent';
 import { partThree } from './src/3_part___function_calling';
 import { partFour } from './src/4_part___agent_loop';
+//
+import { realTools } from './src/5_real_tools';
+//
 
 // -------------------------------------------------
 
@@ -87,4 +90,16 @@ import { partFour } from './src/4_part___agent_loop';
 // we will create a loop that will keep running until
 // we get the response from the tool
 
-partFour();
+// partFour();
+
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ------ Real Tools
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+
+realTools();

@@ -22,6 +22,6 @@ export type AIMessage =
   | { role: 'tool'; content: string };
 */
 
-export interface Tool<A = any, T = any> {
+export interface ToolFn<A = any, T = any> {
   (input: { userMessage: string; toolArgs: A }): Promise<T>;
 }

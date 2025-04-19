@@ -17,17 +17,17 @@ export async function partThree() {
     }),
   };
 
-  const popCultureTool = {
+  /* const popCultureTool = {
     name: 'get_pop_culture_stuff',
     description: 'Use this tool to get pop culture information.',
     parameters: z.object({
       reasoning: z.string().describe('Why did you pick this tool?'),
     }),
   };
-
+ */
   const response = await runAgent({
     userMessage,
-    tools: [weatherTool, popCultureTool],
+    tools: [weatherTool /* , popCultureTool */],
   });
 
   // console.log(response);
