@@ -1,7 +1,7 @@
 import { runAgent } from './agent';
 import { z } from 'zod';
 
-export async function partTwo() {
+export async function partThree() {
   const userMessage = process.argv[2];
 
   if (!userMessage) {
@@ -13,8 +13,6 @@ export async function partTwo() {
     name: 'get_weather_stuff',
     description: 'Use this tool to get weather information.',
     parameters: z.object({
-      // good to have because it helps ai to understand
-      // why did you pick this tool
       reasoning: z.string().describe('Why did you pick this tool?'),
     }),
   };
@@ -32,5 +30,5 @@ export async function partTwo() {
     tools: [weatherTool, popCultureTool],
   });
 
-  console.log(response);
+  // console.log(response);
 }

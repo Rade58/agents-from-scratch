@@ -56,3 +56,15 @@ export const getMessages = async (db_filename: string) => {
 
   return messagesWithoutMetadata;
 };
+
+// Defined for the purpose of part 3 of the workshop
+export const saveToolResponse = async (
+  toolCallId: string,
+  toolResponse: string,
+  db_name: string
+) => {
+  return addMessages(
+    [{ role: 'tool', content: toolResponse, tool_call_id: toolCallId }],
+    db_name
+  );
+};

@@ -13,17 +13,16 @@ export const runLLM = async ({
   temperature?: number;
   model?: string;
 }) => {
-  // we add tools to the LLM
-  const formattedTools = tools.map(zodFunction);
-  //
+  // instead of this
+  // const formattedTools = tools.map(zodFunction);
+  // we check if there is tools and then we format them
+  const formattedTools = tools?.map((t) => zodFunction(t));
 
   const response = await openai.chat.completions.create({
     model,
     temperature,
     messages,
-    // we add tools to the LLM
     tools: formattedTools,
-    //
     tool_choice: 'auto',
     parallel_tool_calls: false,
   });

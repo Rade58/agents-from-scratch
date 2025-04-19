@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import { partOne } from './src/1_part___one';
 import { partTwo } from './src/2_part___agent';
+import { partThree } from './src/3_part___function_calling';
 
 // -------------------------------------------------
 
@@ -17,8 +18,18 @@ import { partTwo } from './src/2_part___agent';
 // - Part 2
 // - in this case we are dealing with tool call
 
+// response from the ai can have content or tool_calls
+
+// if it has content, it's a normal response
+// if it has tool_calls, it's a tool call
+// can't have both
+
+// - we created couple of tools
+// - ai should determine if it's good idea to use the tool or not
+
 // - based on the prompt ai decides to call the tool or not
 // - if it does, it will return the tool call id and arguments
+
 // - ai will tell us that we need to call the function associated with the tool call
 
 // we didn't save the massages in the history (actually we did since
@@ -40,4 +51,24 @@ import { partTwo } from './src/2_part___agent';
 // we can use it to check if the tool call was successful
 // or not
 
-partTwo();
+// partTwo();
+// -------------------------------------------------
+// -------------------------------------------------
+
+// - Part 3
+
+// - continuation of part 2
+// - we are going to handle response of tool call
+// - we are going to call the function and save the result
+
+// like I said once
+// response from the ai can have content or tool_calls
+
+// if it has content, it's a normal response
+// if it has tool_calls, it's a tool call
+// can't have both
+
+// - we also defined new function inside memory file
+// that handles saving the result of the tool response
+
+partThree();
