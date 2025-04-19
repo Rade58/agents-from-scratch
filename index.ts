@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { partOne } from './src/1_part___one';
 import { partTwo } from './src/2_part___agent';
 import { partThree } from './src/3_part___function_calling';
+import { partFour } from './src/4_part___agent_loop';
 
 // -------------------------------------------------
 
@@ -71,4 +72,19 @@ import { partThree } from './src/3_part___function_calling';
 // - we also defined new function inside memory file
 // that handles saving the result of the tool response
 
-partThree();
+// partThree();
+
+// -------------------------------------------------
+// -------------------------------------------------
+
+// - Part 4
+
+// - continuation of part 3
+
+// lets start on the place where we didn't see any
+// message from the actual function of the tool
+
+// we will create a loop that will keep running until
+// we get the response from the tool
+
+partFour();
