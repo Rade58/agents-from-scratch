@@ -9,7 +9,7 @@ export const generateImageToolDeffinition = {
       prompt: z
         .string()
         .describe(
-          'The prompt to use to generate the image with a diffusion model image generator like Dall-e or Midjourney.'
+          "The prompt to use to generate the image with a diffusion model image generator like Dall-e or Midjourney. Be sure to consider the user's original message when making athe prompt. If you are unsure, then ask the user to provide more details."
         ),
     })
     .describe('Generates an image and returns the url of the image.'),

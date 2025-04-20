@@ -25,6 +25,9 @@ export const runTool = async (
       return tools.dadJokeTool(input);
     case 'generate_image':
       return tools.generateImage(input);
+    case 'reddit':
+      return tools.redditTool(input);
+    //
     default:
       throw new Error(`Unknown tool: ${toolCall.function.name}`);
   }
