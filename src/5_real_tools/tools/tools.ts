@@ -12,3 +12,9 @@ export const toolsDEffinitionsList = [
   generateImageToolDeffinition,
   redditToolDeffinition,
 ];
+
+export const toolDefinitions = {
+  dadJokeToolDeffinition,
+  generateImageToolDeffinition,
+  redditToolDeffinition,
+};
