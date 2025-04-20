@@ -23,6 +23,8 @@ export const runTool = async (
     // return getWeather(input);
     case 'dad_joke':
       return tools.dadJokeTool(input);
+    case 'generate_image':
+      return tools.generateImage(input);
     default:
       throw new Error(`Unknown tool: ${toolCall.function.name}`);
   }
